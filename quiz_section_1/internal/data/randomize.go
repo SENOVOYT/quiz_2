@@ -4,7 +4,7 @@ package data
 import (
 	"crypto/rand"
 
-	"kriol.DrianePerez.net/internal/validator"
+	"quiz.2.driane.perez.net/internal/validator"
 )
 
 type Tools struct{

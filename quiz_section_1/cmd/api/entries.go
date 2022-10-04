@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"kriol.DrianePerez.net/internal/data"
-	"kriol.DrianePerez.net/internal/validator"
+	"quiz.2.driane.perez.net/internal/data"
+	"quiz.2.driane.perez.net/internal/validator"
 )
 
 //create entires hander for the POST /v1/entries endpoint
