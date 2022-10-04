@@ -1,9 +1,15 @@
 // Filename: internal/data/entries.go
 package data
 
-import "quiz.2.driane.perez.net/internal/validator"
+import (
+	"time"
+
+	"quiz.2.driane.perez.net/internal/validator"
+)
 
 type EntriesData struct {
+	ID int64 `json:"id"`
+	CreatedAt time.Time `json:"created_at"`
 	Name string `json:"name"`
 	String string `json:"string"`
 	Translate string `json:"translate"`
@@ -12,7 +18,6 @@ type EntriesData struct {
 	Website string `json:"website"`
 	Mode []string `json:"mode"`
 	Version int32 `json:"version"`
-	
 	// Status string `json:"status,omitempty"`
 	// Enviornment string `json:"enviornment,omitempty"`
 	// Version string `json:"version,omitempty"`
