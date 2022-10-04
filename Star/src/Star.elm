@@ -1,6 +1,6 @@
-module star exposing (main)
+module Star exposing (main)
 import Html exposing (Html, div, text)
 
 main : Html msg
 main =
-    div [] [text ""]
+    div [] [text "sign.star"]
