@@ -16,6 +16,11 @@ func (app *application) createEntryHandler(w http.ResponseWriter, r *http.Reques
 		Name string `json:"name"`
 		String string `json:"string"`
 		Translate string `json:"translate"`
+		Phone string `json:"phone"`
+		Email string `json:"email"`
+		Website string `json:"website"`
+		Mode []string `json:"mode"`
+		
 	}
 	err := app.readJSON(w, r, &input)
 	if err != nil {
@@ -27,6 +32,10 @@ func (app *application) createEntryHandler(w http.ResponseWriter, r *http.Reques
 		Name: input.Name,
 		String: input.String,
 		Translate: input.Translate,
+		Phone: input.Phone,
+		Email: input.Email,
+		Website: input.Website,
+		Mode: input.Mode,
 	}
 
 	//initialize a new validator instance
