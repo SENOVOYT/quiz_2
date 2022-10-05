@@ -17,13 +17,12 @@ viewstar : { liked : Bool } -> Html Msg
 viewstar model =
     let
         buttonType = 
-            if model.liked then "star" else "stars"
+            if model.liked then "star_outline" else "star"
         msg =
             if model.liked then Unlike else Like
     in
-
     div [class "header"][
-    span [ class "material-symbols-outlined", onClick msg ] [ text buttonType ] ]
+            span [ class "material-icons md-100", onClick msg ] [ text buttonType ] ]
 view : { liked : Bool } -> Html Msg
 view model =
     viewstar model
