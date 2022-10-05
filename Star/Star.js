@@ -4429,7 +4429,7 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$html$Html$h1 = _VirtualDom_node('h1');
+var $elm$html$Html$span = _VirtualDom_node('span');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$Star$main = A2(
@@ -4441,11 +4441,14 @@ var $author$project$Star$main = A2(
 	_List_fromArray(
 		[
 			A2(
-			$elm$html$Html$h1,
-			_List_Nil,
+			$elm$html$Html$span,
 			_List_fromArray(
 				[
-					$elm$html$Html$text('Star')
+					$elm$html$Html$Attributes$class('material-symbols-outlined')
+				]),
+			_List_fromArray(
+				[
+					$elm$html$Html$text('star')
 				]))
 		]));
 _Platform_export({'Star':{'init':_VirtualDom_init($author$project$Star$main)(0)(0)}});}(this));
