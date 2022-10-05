@@ -32,5 +32,31 @@ func ValidateEntires(v *validator.Validator, entries *EntriesData)  {
 
 	v.Check(entries.Translate != "", "translate", "must be provided")
 	v.Check(len(entries.Translate) <= 200, "translate", "must not be more than 200 bytes long")
+
+	v.Check(entries.Phone != "", "phone", "must be provided")
+	v.Check(validator.Matches(entries.Phone,validator.PhoneRegex), "phone", "must provide a valid phone number")
+	v.Check(len(entries.Phone) <= 300, "phone", "must not be more than 300 bytes long")
+
+	v.Check(entries.Email != "", "email", "must be provided")
+	v.Check(len(entries.Email) <= 300, "email", "must not be more than 300 bytes long")
+	v.Check(validator.Matches(entries.Email,validator.EmailRegex), "phone", "must provide a valid email")
+
+	v.Check(entries.Website != "", "website", "must be provided")
+	v.Check(len(entries.Website) <= 200, "website", "must not be more than 200 bytes long")
+	v.Check(validator.ValidWebsite(entries.Website), "website", "must be a valid URL")
+
+	v.Check(entries.Mode != nil, "mode", "must be provided")
+	v.Check(len(entries.Mode) >= 1, "mode", "must contain one mode")
+	v.Check(len(entries.Mode) <= 5, "mode", "must contain at least five mode")
+	v.Check(validator.Unique(entries.Mode),"mode", "must not contain duplicate entries")
+
+
+
+
+
+
+			
+		
+		//Mode []string `json:"mode"`
 	
 }
