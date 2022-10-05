@@ -4427,6 +4427,6 @@ var $author$project$Star$main = A2(
 	_List_Nil,
 	_List_fromArray(
 		[
-			$elm$html$Html$text('sign.star')
+			$elm$html$Html$text('star')
 		]));
 _Platform_export({'Star':{'init':_VirtualDom_init($author$project$Star$main)(0)(0)}});}(this));
