@@ -10,7 +10,7 @@ import (
 )
 
 //create entires hander for the POST /v1/entries endpoint
-func (app *application) createEntryHandler(w http.ResponseWriter, r *http.Request){
+func (app *application) createInformationHandler(w http.ResponseWriter, r *http.Request){
 	//our target decode destination
 	var input struct{
 		Name string `json:"name"`
@@ -52,7 +52,7 @@ func (app *application) createEntryHandler(w http.ResponseWriter, r *http.Reques
 	//fmt.Fprintln(w, "Create a New Entry")
 }
 //create showentires hander for the GET /v1/entries/:id endpoint
-func (app *application) showEntryHandler(w http.ResponseWriter, r *http.Request){
+func (app *application) showRandomHandler(w http.ResponseWriter, r *http.Request){
 	
 	id, err := app.readIDParam(r)
 	if err != nil {
