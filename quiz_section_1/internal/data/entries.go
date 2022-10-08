@@ -39,7 +39,7 @@ func ValidateEntires(v *validator.Validator, entries *EntriesData)  {
 
 	v.Check(entries.Email != "", "email", "must be provided")
 	v.Check(len(entries.Email) <= 300, "email", "must not be more than 300 bytes long")
-	v.Check(validator.Matches(entries.Email,validator.EmailRegex), "phone", "must provide a valid email")
+	v.Check(validator.Matches(entries.Email,validator.EmailRegex), "email", "must provide a valid email")
 
 	v.Check(entries.Website != "", "website", "must be provided")
 	v.Check(len(entries.Website) <= 200, "website", "must not be more than 200 bytes long")

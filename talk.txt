@@ -1,0 +1,33 @@
+enveloping
+errors.go talk all about it
+health.check
+routes.go
+createInformationHandler
+helpers.go: readjson
+rarshalindent
+eveloping
+readjson
+validator
+
+
+curl commands
+curl -i localhost:4000/ice
+curl -i localhost:4000/v1/random/0
+curl -i -X POST localhost:4000/v1/healthcheck
+curl -i -X PUT localhost:4000/v1/healthcheck
+ BODY='{ "name": "driane", "string": "driane", "translate": "driane", "phone": "501-234-2345", "email": "driane@gmail.com", "website": "https://meet.google.com/?authuser=0", "mode": ["driane","perez"]}'
+ curl -i -d "$BODY" localhost:4000/v1/information
+ 
+ curl -d '["di","dri"]' localhost:4000/v1/information
+ curl -d '{"name":5}' localhost:4000/v1/information
+ curl -X POST localhost:4000/v1/information
+ curl -d '<?xml version="1.0"><notes><notes>' localhost:4000/v1/information
+ curl -d '{"name":5,}' localhost:4000/v1/information
+ curl -i localhost:4000/v1/healhtcheck
+ BODY='{ "name": "driane", "string": "driane", "translate": "driane", "phone": "501-234-2345", "email": "driane@gmail.com", "driane": "https://meet.google.com/?authuser=0", "mode": ["driane","perez"] }'
+ curl -i -d "$BODY" localhost:4000/v1/information
+  curl -i -d "{name:"driane"}{name:"driane"}" localhost:4000/v1/information
+ 
+ 
+ BODY='{ "name": "driane", "string": "driane", "translate": "driane", "phone": "501-234-2345", "email": "driane@gmail.com", "website": "https://meet.google.com/?authuser=0", "mode": ["driane","perez"]}{ "name": "driane", "string": "driane", "translate": "driane", "phone": "501-234-2345", "email": "driane@gmail.com", "website": "https://meet.google.com/?authuser=0", "mode": ["driane","perez"]}'
+  curl -i -d "$BODY" localhost:4000/v1/information
